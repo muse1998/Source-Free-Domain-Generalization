@@ -12,7 +12,6 @@ class AutoEncoder(nn.Module):
     """
     def __init__(self, in_shape=512):
         super(AutoEncoder, self).__init__()
-        print(type(in_shape))
         self.encoder = nn.Sequential(
             nn.Linear(in_shape, 512),
             nn.ReLU(True),
