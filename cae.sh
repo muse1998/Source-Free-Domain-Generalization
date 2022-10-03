@@ -20,10 +20,10 @@ CUDA_VISIBLE_DEVICES=1 python cae.py data/domainnet -d DomainNet -t r -a vitb16 
 CUDA_VISIBLE_DEVICES=1 python cae.py data/domainnet -d DomainNet -t s -a vitb16 --seed 0 --log logs/cae/DomainNet_s
 
 # vitb16, VLCS
-CUDA_VISIBLE_DEVICES=0 python cae.py data/VLCS -d VLCS -t C -a vitb16 --seed 0 --log logs/cae/VLCS_Ca &
-CUDA_VISIBLE_DEVICES=0 python cae.py data/VLCS -d VLCS -t L -a vitb16 --seed 0 --log logs/cae/VLCS_La &
-CUDA_VISIBLE_DEVICES=1 python cae.py data/VLCS -d VLCS -t S -a vitb16 --seed 0 --log logs/cae/VLCS_Su &
-CUDA_VISIBLE_DEVICES=1 python cae.py data/VLCS -d VLCS -t V -a vitb16 --seed 0 --log logs/cae/VLCS_Vo
+CUDA_VISIBLE_DEVICES=0 python cae.py data/VLCS -d VLCS -t C -a vitb16 --seed 0 --log logs/cae/VLCS_C &
+CUDA_VISIBLE_DEVICES=0 python cae.py data/VLCS -d VLCS -t L -a vitb16 --seed 0 --log logs/cae/VLCS_L &
+CUDA_VISIBLE_DEVICES=1 python cae.py data/VLCS -d VLCS -t S -a vitb16 --seed 0 --log logs/cae/VLCS_S &
+CUDA_VISIBLE_DEVICES=1 python cae.py data/VLCS -d VLCS -t V -a vitb16 --seed 0 --log logs/cae/VLCS_V
 
 # vitb16, Terra
 CUDA_VISIBLE_DEVICES=0 python cae.py data/Terra -d Terra -t 100 -a vitb16 --seed 0 --log logs/cae/Terra_100 &
