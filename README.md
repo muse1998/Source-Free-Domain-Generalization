@@ -20,7 +20,7 @@ python setup.py install
 
 All the dataset used can be download from [google drive](???)
 
-We offered an [anonymous link](https://anonfiles.com/cb54peBby2/PACS_zip) for review.
+We offered anonymous links [PACS](https://anonfiles.com/cb54peBby2/PACS_zip), [Terra](https://anonfiles.com/s563ccC9y3/Terra_zip) for review.
 
 you should put *.zip files in ./data and unzip.
 
