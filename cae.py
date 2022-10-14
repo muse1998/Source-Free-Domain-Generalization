@@ -79,7 +79,6 @@ def train(cae, model, args, device, optimizer, text_features, class_num, domain_
     model.train()
     out_features = cae(text_features)
     loss = loss_all(text_features, out_features, class_num, domain_num, device,args.intra,args.inter)
-    print('loss_all: {:.3f} '.format(loss.item()))
 
     optimizer.zero_grad()
     loss.backward()
@@ -181,9 +180,10 @@ def main(args: argparse.Namespace):
         train(autoencoder, model, args, device, optimizer, text_features, class_num, domain_num)
 
         # evaluate on testing set
-        print("Evaluate on test set...")
-        best_test_acc1 = max(best_test_acc1, test(autoencoder, model, args, device, optimizer, text_features, class_num, domain_num, test_loader))
-        print(best_test_acc1)
+        if epoch % 100 == 0:
+            print("Evaluate on test set...")
+            best_test_acc1 = max(best_test_acc1, test(autoencoder, model, args, device, optimizer, text_features, class_num, domain_num, test_loader))
+            print(best_test_acc1)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Baseline for Domain Generalization')
