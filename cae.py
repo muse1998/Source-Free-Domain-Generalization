@@ -99,7 +99,7 @@ def test(cae, model, args, device, optimizer, text_features, class_num, domain_n
     model.eval()
     with torch.no_grad():
         # the reshaping is for mean pooling on the domain dimension
-        in_features = text_features.view(class_num, domain_num, -1)
+        in_features = text_features
         out_features = cae(in_features)
         text_features_rec = out_features.view(class_num, domain_num, -1)
         # mean pooling to generate domain unified prompt representations for each class
