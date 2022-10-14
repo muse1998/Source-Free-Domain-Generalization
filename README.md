@@ -21,7 +21,7 @@ python setup.py install
 
 
 
-All the dataset used can be download from [google drive](???)
+All the dataset used will be available at [google drive](???)
 
 We offered anonymous links [PACS](https://anonfiles.com/cb54peBby2/PACS_zip), [Terra](https://anonfiles.com/s563ccC9y3/Terra_zip) for review.
 
